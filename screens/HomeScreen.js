@@ -8,7 +8,7 @@ import { styles } from '../theme';
 const ios = Platform.OS == "ios";
 export default function HomeScreen() {
     return (
-        <View className="flex-1 bg-neutral-800">
+        <View className="flex-1 bg-red-800">
             {/*search bar and logo*/}
             <SafeAreaView className={ios ? "-mb-2" : "mb-3"}>
                 <StatusBar style="light" />
