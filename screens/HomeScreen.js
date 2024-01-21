@@ -21,6 +21,7 @@ export default function HomeScreen() {
                     <Bars3CenterLeftIcon size='30' strokeWidth={2} color='white' />
                     <Text
                         className="text-white text-3xl font-bold">
+                        <Text style={styles.text}>L</Text>lumer
                         <Text style={styles.text}>M</Text>ovies
                     </Text>
                     <TouchableOpacity>
@@ -35,6 +36,7 @@ export default function HomeScreen() {
 
                 <TrendingMovies data={trending} />
                 <MovieList title={"Upcoming"} data={upcoming} />
+                <MovieList title={"Top Rated"} data={topRated} />
             </ScrollView>
         </View>
     )
