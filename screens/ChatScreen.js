@@ -5,8 +5,8 @@ import { styles } from '../theme';
 
 const Chat = () => {
     const [data, setData] = useState([]);
-    const apiKey = '';
-    const apiUrl = '';
+    const apiKey = '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';
+    const apiUrl = 'https://api.openai.com/v1/engines/text-davinci-002/completions';
     const [message, setMessage] = useState('');
 
     const handleSend = async () => {
@@ -24,7 +24,7 @@ const Chat = () => {
             });
         const text = response.data.choices[0].text;
         setData([...data, { type: 'user', 'text': TextInput }, { type: 'bot', 'text': text }]);
-        setTextInput('');
+        setMessage('');
     }
 
     return (
@@ -46,37 +46,3 @@ const Chat = () => {
 
 export default Chat
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#eab308',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    title: {
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: 'white',
-    },
-    body: {
-        width: '100%',
-        backgroundColor: '#eab308',
-        padding: 10,
-    },
-    input: {
-        width: '100%',
-        height: 40,
-        backgroundColor: '#eab308',
-        padding: 10,
-        margin: 10,
-        borderRadius: 10,
-    },
-    button: {
-        width: '100%',
-        height: 40,
-        backgroundColor: '#eab308',
-        padding: 10,
-        margin: 10,
-        borderRadius: 10,
-    }
-});
